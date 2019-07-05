@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function getMsg() {
+            var obj = document.getElementById('uname');
+            console.log(obj.value);
+            var obj1 = document.getElementById('d1').innerHTML;
+            obj1 = obj.value;
+            console.log(obj1);
+        }
+    </script>
+    <script>
+        function getMsg1() {
+          //ES6做了简化
+          h.innerHTML=msg.value;
+          console.log(h.innerHTML)
+        }
+    </script>
+</head>
+<body>
+<input type="text" id="uname">
+<div id = 'd1'>留下来</div>
+<button onclick="getMsg()">点</button><br>
+<input type="text" id="msg">
+<h4 id="h"></h4>
+<button onclick="getMsg1()">点</button>
+</body>
+</html>

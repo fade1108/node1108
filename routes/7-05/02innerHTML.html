@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function show() {
+            d1.innerHTML = "<a href=''>超链接</a>";
+            var m1 = 111;
+            var m2 = 222;
+            var m3 = 333;
+            var m4 = 444;
+            d1.innerHTML = "<table border=\"2px\" bgcolor=\"#ffc0cb\" width=\"500px\" height=\"500px\">\n" +
+                "    <tr>\n" +
+                "        <td>"+m1+"</td>\n" +
+                "        <td>"+m2+"</td>\n" +
+                "    </tr>\n" +
+                "    <tr>\n" +
+                "        <td>"+m3+"</td>\n" +
+                "        <td>"+m4+"</td>\n" +
+                "    </tr>\n" +
+                "</table>"
+        }
+        function show2() {
+            var a="";
+            for(var i = 1;i<=100;i++){
+                a += "<tr><td>"+"id"+i+"</td></tr>"
+            }
+           connect.innerHTML=a;
+        }
+
+    </script>
+</head>
+<body>
+<table border="1px">
+    <tr>
+        <td>用户id</td>
+    </tr>
+    <tbody id="connect">
+    </tbody>
+</table>
+<div id ="d1" align="center"></div>
+<button onclick="show()">点我</button>
+<button onclick="show2()">点我2</button>
+</body>
+</html>

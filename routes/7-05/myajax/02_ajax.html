@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2 ajax</title>
+    <script>
+        function show() {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange=function () {
+                if (xhr.readyState==4&&xhr.status==200){
+                    var result = xhr.responseText;
+                    alert(result);
+                }
+
+            };
+            // function(method,url,async,user,password)
+            xhr.open("get","/demo2/myajax_1",true);
+            xhr.send();
+        }
+    </script>
+</head>
+<body>
+<button onclick="show()">点它</button>
+
+</body>
+</html>

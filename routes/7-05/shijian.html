@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function msg1() {
+            //失去焦点时，做非空验证，结果显示在span中
+            var a = uname.value;
+            if(a==""){
+                msg.innerHTML="用户名不能为空"
+            }else {
+                msg.innerHTML="输入正确"
+            }
+        }
+        function msg2() {
+         mm.innerHTML='密码长度10-20位'
+        }
+    </script>
+</head>
+<body>
+<!--onblur 失去焦点-->
+<!--onfocus获取焦点-->
+<input onblur="msg1()" type="text" id="uname">
+<span id="msg"></span><br>
+<!--onfocus获取焦点-->
+<input onfocus="msg2()" type="text" id="password">
+<span id="mm"></span>
+
+</body>
+</html>

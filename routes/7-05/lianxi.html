@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function msg1() {
+            s1.innerHTML="用户名6-12位";
+            var a = uname.value;
+            if (a==""){
+                s1.innerHTML='用户名不能为空';
+            }else {
+                s1.innerHTML='通过';
+            }
+        }
+        function msg2() {
+            s2.innerHTML="密码8-16位";
+            var a = upwd.value;
+            if (a==""){
+                s2.innerHTML='密码不能为空';
+            }else {
+                s2.innerHTML='通过';
+            }
+
+        }
+        function check_cpwd() {
+            var p1 = upwd.value;
+            var p2 = cpwd.value;
+            if(p1==p2){
+                s3.innerHTML="输入一致"
+            }else {
+                s3.innerHTML='输入不一致'
+            }
+        }
+    </script>
+</head>
+<body>
+用户名<input onfocus="msg1()" onblur="msg1()" type="text" id="uname">
+<span id="s1"></span><br>
+密码<input onfocus="msg2()" type="text" id="upwd">
+<span id="s2"></span><br>
+请重复输入密码<input type="text" id="cpwd" onblur="check_cpwd()">
+<span id="s3"></span><br>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function getXML() {
+            //创建xhr对象
+            var xhr = new XMLHttpRequest();
+            //绑定监听，获取响应
+            xhr.onreadystatechange=function () {
+                if(xhr.readyState==4&&xhr.status==200){
+                    var result = xhr.responseXML;
+                    //解析xml这个对象
+                    //1.找到跟元素这一层
+                    var studentlist=result.getElementsByTagName("studentlist");
+                    //2.通过根元素找第二层
+                    var student =  studentlist[0].getElementsByTagName("student");
+                    //3.通过第二层找第三层
+                    var uname =  student[1].getElementsByTagName("uname");
+                        console.log(uname[0].innerHTML)
+            };
+            //打开连接，创建请求
+            xhr.open("get","stus.xml",true);
+            //发送请求
+            xhr.send();
+        }
+        }
+    </script>
+</head>
+<body>
+<div id="d1"></div>
+<button onclick="getXML()">获取xml</button>
+
+</body>
+</html>

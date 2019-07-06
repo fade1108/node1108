@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>post</title>
+
+</head>
+<body>
+登录：<input type="text" id="uname"><br>
+注册：<input type="text" id="upwd"><br>
+<button onclick="login()">登录</button>
+<script>
+
+    function login() {
+
+        var $uname = uname.value;
+        var $upwd  = upwd.value;
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange=function () {
+            if(xhr.readyState==4&&xhr.status==200){
+                var result=xhr.responseText;
+                if (result==1){
+                    alert("用户名密码输入正确")
+                }else if (result==0){
+                    alert("用户名密码不正确")
+                }
+            }
+        };
+        xhr.open("post","/demo2/post_login",true);
+        //创建请求主体，把数据放到请求主体中
+        var formdata = "uname="+$uname+"&"+"upwd="+$upwd;
+        //由于要传的递请求主体。主体中有特殊字符，则需要修改请求
+        xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+        console.log(formdata);
+        //ajax发送请求。将formdata放入其中
+        xhr.send(formdata);
+
+    }
+</script>
+
+</body>
+</html>

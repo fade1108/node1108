@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<studentlist>
+    <student>
+        <uid>1001</uid>
+        <uname>hanmeimei</uname>
+        <age>20</age>
+    </student>
+    <student>
+        <uid>1002</uid>
+        <uname>xiangbaba</uname>
+        <age>20</age>
+    </student>
+    <student>
+        <uid>1003</uid>
+        <uname>dondong</uname>
+        <age>20</age>
+    </student>
+</studentlist>
